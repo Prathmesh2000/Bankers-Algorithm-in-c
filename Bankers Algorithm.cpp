@@ -110,5 +110,7 @@ if(count == p)
 		}
 }
 	else
-	printf("\nThe system is in an unsafe state ");
+	{	
+		printf("\nThe system is in an unsafe state ");
+	}
 }
