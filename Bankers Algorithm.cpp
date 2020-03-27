@@ -2,7 +2,7 @@
 
 int main()
 {
-int Allocated[10][10], Max[10][10], Need[10][10], Available[10], Completed[10];
+int Allocated[10][10], Max[10][10], Need[10][10], Available[10], Completed[10],Safe_Sequence[10];
 int p, r, i, j, process, count;
 count = 0;
 
@@ -85,6 +85,7 @@ do
 	if(process != -1)
 	{
 		printf("\nProcess %d runs to completion : ", process + 1);
+		Safe_Sequence[count] = process + 1;
 		count++;
 		for(j = 0; j < r; j++)
 		{
@@ -99,6 +100,14 @@ do
 if(count == p)
 {
 	printf("\n\nThe system is in a safe state\n");
+	printf("Safe Sequence :  ");
+	for( i = 0; i < p; i++)
+		{	printf("Process%d ", Safe_Sequence[i]);
+			if(i<p-1)
+			{
+				printf("-> ");
+			}
+		}
 }
 	else
 	printf("\nThe system is in an unsafe state ");
