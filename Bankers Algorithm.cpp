@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 int main()
 {
-int Allocated[10][10], Max[10][10], Need[10][10], Available[10], Completed[10],Safe_Sequence[10];
+int Allocated[10][10], Max[10][10], Need[10][10], Available[10], Completed[10], Safe_Sequence[10];
 int p, r, i, j, process, count;
 count = 0;
 
@@ -49,6 +50,7 @@ for(i = 0; i < p; i++)
 				Need[i][j] = Max[i][j] - Allocated[i][j];
 			}
 	}
+system("CLS");
 do
 {
 	printf("\n Max matrix:\tAllocation matrix:\n");
@@ -109,8 +111,6 @@ if(count == p)
 			}
 		}
 }
-	else
-	{	
-		printf("\nThe system is in an unsafe state ");
-	}
+else
+	printf("\nThe system is in an unsafe state ");
 }
