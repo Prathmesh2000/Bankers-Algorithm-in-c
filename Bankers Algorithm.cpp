@@ -100,4 +100,6 @@ if(count == p)
 {
 	printf("\n\nThe system is in a safe state\n");
 }
+	else
+	printf("\nThe system is in an unsafe state ");
 }
